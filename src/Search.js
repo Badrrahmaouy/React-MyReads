@@ -17,7 +17,7 @@ class Search extends React.Component {
 
   handleChange = query => {
     this.setState(() => ({
-      input: query.trim()
+      input: query
     }))
     
     this.props.search(query)

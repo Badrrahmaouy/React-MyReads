@@ -17,11 +17,9 @@ class App extends React.Component {
     searchBooks: []
    }
 
-  componentDidMount() {
-    BooksAPI.getAll()
-    .then(data => (
-      this.setState({books: data})
-    ))
+  async componentDidMount() {
+    const books = await BooksAPI.getAll()
+    this.setState({ books })
   }
 
   search = query => {

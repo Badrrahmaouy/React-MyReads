@@ -17,7 +17,6 @@ class Mover extends React.Component {
     this.setState(() => ({
       shelf: newShelf
     }))
-    
     this.props.moveBook(this.props.book, newShelf)
   }
 
